@@ -1,6 +1,7 @@
 --exercicio 1
 SELECT users.id, users.name, cities.name
-FROM users JOIN cities ON users."cityId" = cities.id;
+FROM users JOIN cities ON users."cityId" = cities.id
+WHERE cities.name = "Rio de Janeiro";
 --exercicio 2
 SELECT testimonials.id, writer.name, recipient.name, testimonials.message
 FROM testimonials 
