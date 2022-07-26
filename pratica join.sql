@@ -31,8 +31,7 @@ companies.name AS company,
 roles.name AS "role"
 FROM schools JOIN educations ON schools.id = educations."schoolId"
 JOIN courses ON courses.id = educations."courseId"
-JOIN users ON educations."userId"=users.id
-JOIN applicants ON users.id = applicants."userId"
+JOIN applicants ON educations."userId" = applicants."userId"
 JOIN jobs ON applicants."jobId"=jobs.id
 JOIN companies ON jobs."companyId"=companies.id
 JOIN roles ON jobs."roleId"=roles.id
